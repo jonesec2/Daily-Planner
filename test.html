@@ -1,0 +1,35 @@
+'''<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="moment.js"></script>
+    <script>
+        moment().format();
+    </script>
+</head>
+<body>
+    <div id="right-now"></div>
+    <script>
+        var span = $("<span>");
+        var now = moment();
+        // var when = moment().add(7, 'days').subtract(1, 'months').year(2009).hours(0).minutes(0).seconds(0);
+        // var now = moment("12-25-1995", "MM-DD-YYYY");
+        console.log(now);
+        // console.log(now._d);
+        // span.text(now._d);
+        span.text(now);
+        // span.text(when);
+        $("#right-now").append(span);
+        // $("body").append(span);
+        console.log(moment().date(Number));
+        console.log(moment().date()); // Number
+        console.log(moment().hour(Number));
+        console.log(moment().minute(Number));
+        console.log(moment().hour()); // Number
+    </script>
+</body>
+</html>

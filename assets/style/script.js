@@ -44,22 +44,22 @@ function showTime() {
         } else {
             hours = hours
         }
-        console.log(hours)
+        console.log(hours.toString());
     }, 3000)
-
 }
-showTime()
+showTime();
+
 var int = parseFloat(timeForm9)
 var timeForm9 = $("#9").text();
 var int = parseFloat(timeForm9)
 console.log(timeForm9.charAt(0));
 
-var timeForm10 = $("#10").text();
-console.log(timeForm10.substring(0,2));
-var timeForm11 = $("#11").text();
-console.log(timeForm11.substring(0,2));
-var timeForm12 = $("#12").text();
-console.log(timeForm12.substring(0,2));
+var timeForm10 = $("#ten").text();
+console.log(timeForm10.substring(0, 2));
+var timeForm11 = $("#eleven").text();
+console.log(timeForm11.substring(0, 2));
+var timeForm12 = $("#twelve").text();
+console.log(timeForm12.substring(0, 2));
 var timeForm1 = $("#1").text();
 console.log(timeForm1.charAt(0));
 var timeForm2 = $("#2").text();
@@ -71,6 +71,9 @@ console.log(timeForm4.charAt(0));
 var timeForm5 = $("#5").text();
 console.log(timeForm5.charAt(0));
 
+timeForm = $(".input-group-text").text();
+console.log(timeForm.substring(0,2))
+
 
 console.log(hours)
 
@@ -79,16 +82,19 @@ console.log(hours)
 
 // $(".hour").delegate(".form-control", getHours())
 
-if (hours.toString() > timeForm5.charAt(0)) {
-    $(".form-control").css('background-color', 'grey')
-} 
-else if (hours.toString() === timeForm3.charAt(0)) {
-    $(".form-control").css('background-color', 'red')
-}
-else   {
-    $(".form-control").css('background-color', 'green')
+function checkHour() {
+    if (hours.toString() > timeForm5.charAt(0)) {
+        $(".form-control").css('background-color', 'grey')
+    }
+    else if (hours.toString() === timeForm3.charAt(0)) {
+        $(".form-control").css('background-color', 'red')
+    }
+    else {
+        $(".form-control").css('background-color', 'green')
+    }
 }
 
+checkHour();
 // setInterval ("refreshDiv();",3000)
 // function refreshDiv(){
 // $('.form-control').load('index.html .form-control')
@@ -114,3 +120,8 @@ else   {
 // else {
 
 // };
+
+
+//////////////////////////////////////////////////////////////////////////////////////
+// append save button
+$(".input-group-append").append("<button >Save Plans <i class='fa fa-save'></i></button>")

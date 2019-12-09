@@ -10,35 +10,112 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
 </head>
 
 <body>
 
     <div class="jumbotron text-center" style="border-bottom-color: black; border-bottom-width: 10px;">
         <H1>Today's Schedule</H1>
-        <h2>It is <get today's date here></get>
-        </h2>
-        <h3> ex time 3:30pm<get the current time></get>
+        <h3 id="timer"></get>
         </h3>
+        <p class="mb-0" style="color: rgb(83, 81, 81);">Hang in there!</p>
     </div>
     <div class="container">
         <div class="row">
-            <div class="input-group mb-3">
+            <div class="input-group mb-1 hour">
                 <div class="input-group-prepend">
-                    <span class="input-group-text">9:00 AM</span>
+                    <span id="9" class="pr-4 input-group-text">9:00 AM</span>
                 </div>
-                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                <input type="text" class="form-control" aria-label="hour">
                 <div class="input-group-append">
                     <span class="input-group-text"> "save button" </span>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class=" input-group mb-3">
+            <div class=" input-group mb-1 hour">
                 <div class="input-group-prepend">
-                    <span class="input-group-text">10:00 AM</span>
+                    <span id="10" class="input-group-text 10">10:00 AM</span>
                 </div>
-                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                <input type="text" class="form-control" aria-label="hour">
+                <div class="input-group-append">
+                    <span class="input-group-text"> "save button" </span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-group mb-1 hour">
+                <div class="input-group-prepend">
+                    <span id="11" class="input-group-text 11">11:00 AM</span>
+                </div>
+                <input type="text" class="form-control" aria-label="hour">
+                <div class="input-group-append">
+                    <span class="input-group-text"> "save button" </span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class=" input-group mb-1 hour">
+                <div class="input-group-prepend">
+                    <span id="12" class="input-group-text 12">12:00 AM</span>
+                </div>
+                <input type="text" class="form-control" aria-label="hour">
+                <div class="input-group-append">
+                    <span class="input-group-text"> "save button" </span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-group mb-1 hour">
+                <div class="input-group-prepend">
+                    <span id="1" class="input-group-text 1">1:00 AM</span>
+                </div>
+                <input type="text" class="form-control" aria-label="hour">
+                <div class="input-group-append">
+                    <span class="input-group-text"> "save button" </span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class=" input-group mb-1 hour">
+                <div class="input-group-prepend">
+                    <span id="2" class="input-group-text 2">2:00 AM</span>
+                </div>
+                <input type="text" class="form-control" aria-label="hour">
+                <div class="input-group-append">
+                    <span class="input-group-text"> "save button" </span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-group mb-1 hour">
+                <div class="input-group-prepend">
+                    <span id="3" class="input-group-text 3">3:00 AM</span>
+                </div>
+                <input type="text" class="form-control" aria-label="hour">
+                <div class="input-group-append">
+                    <span class="input-group-text"> "save button" </span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-group mb-1 hour">
+                <div class="input-group-prepend">
+                    <span id="4" class="input-group-text 4">4:00 AM</span>
+                </div>
+                <input type="text" class="form-control" aria-label="hour">
+                <div class="input-group-append">
+                    <span class="input-group-text"> "save button" </span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class=" input-group mb-1 hour">
+                <div class="input-group-prepend">
+                    <span id="5" class="input-group-text 5">5:00 AM</span>
+                </div>
+                <input type="text" class="form-control" aria-label="hour">
                 <div class="input-group-append">
                     <span class="input-group-text"> "save button" </span>
                 </div>

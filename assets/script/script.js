@@ -30,7 +30,7 @@ for (var i = 0; i < timeArray.length; i++) {
                     <div class= 'input-group mb-1 hour'>
                         <div class='input-group-prepend'><span id= ${timeDivArray[i]} class='pr-4 input-group-text'>${timeArray[i]}</span></div>
                         <input id=${wordArray[i]} type='text' class='form-control' aria-label='hour'>    
-                        <div class='input-group-append' data-time=${wordArray[i]}> <button class='button' id= ${timeButtonArray[i]}  >Save Plans <i class='fa fa-save'></i></button></div>
+                        <div class='input-group-append' data-time=${wordArray[i]}> <button class='button' id= ${timeButtonArray[i]} >Save Plans <i class='fa fa-save'></i></button></div>
                     </div>
                     `)
     $(".container").append(timeDiv)
@@ -42,15 +42,16 @@ for (var i = 0; i < timeArray.length; i++) {
 // each hour needs it's own local storage
 
 //sort of dynamic local storage
-// var buttonPress = $(".button").on("click", function () {
-
-//     var formText = document.getElementById('nine').value;
-//     localStorage.setItem("Task " + this.id, formText)
-//     console.log(formText)
-// })
+$(".button").on("click", function () {
+    // figure out sibling syntax so when button is pressed the value of it's sibling is added to local
+    localStorage.setItem("Task " + this.id, $('input').value)
+    console.log(this.id)
+})
 
 //hard coded section
 ///////////////////////////////////////////////////////////////
+var storageArray = []
+
 var buttonPress = $(".button").on("click", function () {
 
     var formText = document.getElementById('nine').value;
@@ -58,15 +59,15 @@ var buttonPress = $(".button").on("click", function () {
     console.log(formText)
 })
 //set local storage equal to form value
-$('#nine').val(localStorage.getItem("Task buttonOne"));
-$('#ten').val(localStorage.getItem("Task buttonTwo"));
-$('#eleven').val(localStorage.getItem("Task buttonThree"));
-$('#twelve').val(localStorage.getItem("Task buttonFour"));
-$('#one').val(localStorage.getItem("Task buttonFive"));
-$('#two').val(localStorage.getItem("Task buttonSix"));
-$('#three').val(localStorage.getItem("Task buttonSeven"));
-$('#four').val(localStorage.getItem("Task buttonEight"));
-$('#five').val(localStorage.getItem("Task buttonNine"));
+// $('#nine').val(localStorage.getItem("Task buttonOne"));
+// $('#ten').val(localStorage.getItem("Task buttonTwo"));
+// $('#eleven').val(localStorage.getItem("Task buttonThree"));
+// $('#twelve').val(localStorage.getItem("Task buttonFour"));
+// $('#one').val(localStorage.getItem("Task buttonFive"));
+// $('#two').val(localStorage.getItem("Task buttonSix"));
+// $('#three').val(localStorage.getItem("Task buttonSeven"));
+// $('#four').val(localStorage.getItem("Task buttonEight"));
+// $('#five').val(localStorage.getItem("Task buttonNine"));
 ///////////////////////////////////////////////////////////////
 
 
@@ -78,6 +79,7 @@ timeNow = new Date();
 hours = timeNow.getHours();
 
 var checkHour = hours.toString()
+// var checkHour = 14
 console.log(checkHour);
 
 // checks the current hour as a string every three seconds
@@ -107,6 +109,10 @@ showTime();
 
 // current function styles all divs at once.
 // need to figure out how to parse each div as an individual, and update individually depending on current time
+
+//use for .each to syle these things
+
+
 function checkNine() {
     if (checkHour > 9) {
         $("#nine").css('background-color', 'grey')

@@ -70,14 +70,7 @@ var timerId = null
 var hours = null
 timeNow = new Date();
 hours = timeNow.getHours();
-if (hours > 12) {
-    hours -= 12;
-}
-else if (hours === 0) {
-    hours = 12;
-} else {
-    hours = hours
-}
+
 var checkHour = hours.toString()
 console.log(checkHour);
 
@@ -104,34 +97,124 @@ showTime();
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 // finds hour by div
 // needs to be updated to be more dynamic
-var timeForm10 = $("#ten").text();
-console.log(timeForm10.substring(0, 2));
 
 
-console.log($('span #id').text())
 // current function styles all divs at once.
 // need to figure out how to parse each div as an individual, and update individually depending on current time
-function checkPastHour() {
-    if (moment().format('LT') > timeForm10.charAt(0)) {
-        $(".form-control").css('background-color', 'grey')
+function checkNine() {
+    if (checkHour > 9) {
+        $("#nine").css('background-color', 'grey')
     }
-    if (checkHour === timeForm10.charAt(0)) {
-        $(".form-control").css('background-color', 'red')
-    }
-    if (checkHour < timeForm10.charAt(0)) {
-        $(".form-control").css('background-color', 'green')
-    }
-}
-checkPastHour();
-
-function checkCurrentHour() {
-    if (hours.toString() > timeForm5.charAt(0)) {
-        $(".form-control").css('background-color', 'grey')
-    }
-    else if (hours.toString() === timeForm4.charAt(0)) {
-        $(".form-control").css('background-color', 'red')
+    else if (checkHour == 9) {
+        $("#nine").css('background-color', 'red')
     }
     else {
-        $(".form-control").css('background-color', 'green')
+        $("#nine").css('background-color', 'green')
     }
 }
+checkNine();
+
+
+function checkTen() {
+    if (checkHour > 10) {
+        $("#ten").css('background-color', 'grey')
+    }
+    else if (checkHour == 10) {
+        $("#ten").css('background-color', 'red')
+    }
+    else {
+        $("#ten").css('background-color', 'green')
+    }
+}
+checkTen();
+
+function checkEleven() {
+    if (checkHour > 11) {
+        $("#eleven").css('background-color', 'grey')
+    }
+    else if (checkHour == 11) {
+        $("#eleven").css('background-color', 'red')
+    }
+    else {
+        $("#eleven").css('background-color', 'green')
+    }
+}
+checkEleven();
+function checkTwelve() {
+    if (checkHour > 12) {
+        $("#twelve").css('background-color', 'grey')
+    }
+    else if (checkHour == 12) {
+        $("#twelve").css('background-color', 'red')
+    }
+    else {
+        $("#twelve").css('background-color', 'green')
+    }
+}
+checkTwelve();
+function checkOne() {
+    if (checkHour > 13) {
+        $("#one").css('background-color', 'grey')
+    }
+    else if (checkHour == 13) {
+        $("#one").css('background-color', 'red')
+    }
+    else {
+        $("#one").css('background-color', 'green')
+    }
+}
+checkOne();
+function checkTwo() {
+    if (checkHour > 14) {
+        $("#two").css('background-color', 'grey')
+    }
+    else if (checkHour == 14) {
+        $("#two").css('background-color', 'red')
+    }
+    else {
+        $("#two").css('background-color', 'green')
+    }
+}
+checkTwo();
+
+function checkThree() {
+    if (checkHour > 15) {
+        $("#three").css('background-color', 'grey')
+    }
+    else if (checkHour == 15) {
+        $("#three").css('background-color', 'red')
+    }
+    else {
+        $("#three").css('background-color', 'green')
+    }
+}
+checkThree();
+
+function checkFour() {
+    if (checkHour > 16) {
+        $("#four").css('background-color', 'grey')
+    }
+    else if (checkHour == 16) {
+        $("#four").css('background-color', 'red')
+    }
+    else {
+        $("#four").css('background-color', 'green')
+    }
+}
+checkFour();
+
+function checkFive() {
+    if (checkHour > 17) {
+        $("#five").css('background-color', 'grey')
+    }
+    else if (checkHour == 17) {
+        $("#five").css('background-color', 'red')
+    }
+    else {
+        $("#five").css('background-color', 'green')
+    }
+}
+checkFive();
+
+
+

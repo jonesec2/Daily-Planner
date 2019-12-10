@@ -41,7 +41,13 @@ for (var i = 0; i < timeArray.length; i++) {
 // create local storage .on("click"
 // each hour needs it's own local storage
 
-//?
+//sort of dynamic local storage
+// var buttonPress = $(".button").on("click", function () {
+
+//     var formText = document.getElementById('nine').value;
+//     localStorage.setItem("Task " + this.id, formText)
+//     console.log(formText)
+// })
 
 //hard coded section
 ///////////////////////////////////////////////////////////////

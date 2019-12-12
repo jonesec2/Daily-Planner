@@ -185,13 +185,13 @@ $('.form-control').each(function () {
     console.log(thisId)
     
     if ($(this).data('number') < checkHour) {
-        document.getElementById(thisId).style.background ="grey";
+        document.getElementById(thisId).style.background ="rgb(169, 169, 169)";
     }
     else if (checkHour == $(this).data('number')) {
         document.getElementById(thisId).style.background ="rgb(40, 130, 171)";
     }
     else {
-        document.getElementById(thisId).style.background ="green";
+        document.getElementById(thisId).style.background ="rgb(64, 192, 74)";
     }
     console.log($(this).data('number'))
     console.log(checkHour)

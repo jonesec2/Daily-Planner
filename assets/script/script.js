@@ -1,16 +1,4 @@
-// sets the date at the top
-// var NowMoment = moment().format('LTS');
-// // setInterval(NowMoment, 1000);
-// console.log(NowMoment)
-// $(document).ready(function () {
-//     timerId = setInterval(function () {
-//         var eDisplayMoment = document.getElementById('timer');
-//         eDisplayMoment.innerHTML = NowMoment;
-//         setInterval(NowMoment, 1000);
-//     })
-// });
-
-
+// creates variables for Time
 var dateTime = null,
     date = null;
 
@@ -75,7 +63,15 @@ for (var i = 0; i < timeArray.length; i++) {
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
+// Randomly selects a motivational message from motivational array
+var motivational = ['Hang in there!','You can do this!','Friday is just around the corner.','Remember to smile!']
 
+var randomMotivation =  Math.floor(Math.random()*motivational.length);
+var randomElement = motivational[randomMotivation];
+console.log(randomElement)
+$('#slogan').text(randomElement)
+
+///////////////////////////////////////////////////////////////////////////////////////////////
 //sort of dynamic local storage
 // $(".button").on("click", function () {
 //     var formData = $('.form-control').each(function (index) {

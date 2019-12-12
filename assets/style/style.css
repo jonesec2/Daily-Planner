@@ -10,8 +10,9 @@
 
 .form-control {
     font-size: 20px;
+    color: white;
 }
 
-.form-control {
+.form-control:focus {
     color: white;
 }

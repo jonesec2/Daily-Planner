@@ -22,8 +22,8 @@ var hours = null
 timeNow = new Date();
 hours = timeNow.getHours();
 
-// var checkHour = hours
-var checkHour = 14
+var checkHour = hours
+// var checkHour = 14
 console.log(checkHour);
 
 // checks the current hour as a string every three seconds
@@ -175,189 +175,33 @@ $('#five').val(localStorage.getItem("Task buttonNine"));
 //     });
 // });
 
-// $('.form-control').each(function () {
-//     $(this).data('number')
-//     console.log($(this).data('number'))
-//     console.log($(this.id))
-// })
 
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// finds hour by div
 
 $('.form-control').each(function () { 
     var thisId = this.id
     console.log(thisId)
+    
     if ($(this).data('number') < checkHour) {
-        $(thisId).css('background-color', 'grey')
+        document.getElementById(thisId).style.background ="grey";
     }
     else if (checkHour == $(this).data('number')) {
-        $(thisId).css('background-color', 'red')
+        document.getElementById(thisId).style.background ="rgb(40, 130, 171)";
     }
     else {
-        $(thisId).css('background-color', 'green')
+        document.getElementById(thisId).style.background ="green";
     }
     console.log($(this).data('number'))
     console.log(checkHour)
   
 });
 
-// var hourDivs = $('.form-control')
-
-// for (var i = 0; i < numberArray.length; i++) {
-    
-//     if ($(this[i]).data('number') == checkHour) {
-//         hourDivs[i].parent().attr("style", "background-color:lightblue;");
-//         hourDivs[i].parent().prevAll().attr("style", "background-color:lightgrey;");
-//         hourDivs[i].parent().prevAll().addClass("disabled");
-//         hourDivs[i].parent().nextAll().attr("style", "background-color:white;");
-
-//     }
-// }
-
-
-// console.log(hourDivs.val())
-// for (var t = 0; t < numberArray.length; t++) {
-
-
-// }
-console.log(checkHour)
-
-// $('input').data('number').each(function () {
-
-
-// checks the time and compares to data-number
-// should check each div then style accordingly
-// $('input').on("load",function () {
-//     if (checkHour > this.data('number')) {
-//         $("input").css('background-color', 'grey')
-//     }
-//     else if (checkHour == $('input').data('number')) {
-//         $("input").css('background-color', 'red')
-//     }
-//     else {
-//         $("input").css('background-color', 'green')
-//     }
-// })
-
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-// finds hour by div
-// needs to be updated to be more dynamic
-
-
 // current function styles all divs at once.
 // need to figure out how to parse each div as an individual, and update individually depending on current time
 
 //use for .each to style these things
-
-
-
-
-// checkTime();
-
-// checkTime();
-
-
-// function checkTen() {
-//     if (checkHour > 10) {
-//         $("#ten").css('background-color', 'grey')
-//     }
-//     else if (checkHour == 10) {
-//         $("#ten").css('background-color', 'red')
-//     }
-//     else {
-//         $("#ten").css('background-color', 'green')
-//     }
-// }
-// checkTen();
-
-// function checkEleven() {
-//     if (checkHour > 11) {
-//         $("#eleven").css('background-color', 'grey')
-//     }
-//     else if (checkHour == 11) {
-//         $("#eleven").css('background-color', 'red')
-//     }
-//     else {
-//         $("#eleven").css('background-color', 'green')
-//     }
-// }
-// checkEleven();
-// function checkTwelve() {
-//     if (checkHour > 12) {
-//         $("#twelve").css('background-color', 'grey')
-//     }
-//     else if (checkHour == 12) {
-//         $("#twelve").css('background-color', 'red')
-//     }
-//     else {
-//         $("#twelve").css('background-color', 'green')
-//     }
-// }
-// checkTwelve();
-// function checkOne() {
-//     if (checkHour > 13) {
-//         $("#one").css('background-color', 'grey')
-//     }
-//     else if (checkHour == 13) {
-//         $("#one").css('background-color', 'red')
-//     }
-//     else {
-//         $("#one").css('background-color', 'green')
-//     }
-// }
-// checkOne();
-// function checkTwo() {
-//     if (checkHour > 14) {
-//         $("#two").css('background-color', 'grey')
-//     }
-//     else if (checkHour == 14) {
-//         $("#two").css('background-color', 'red')
-//     }
-//     else {
-//         $("#two").css('background-color', 'green')
-//     }
-// }
-// checkTwo();
-
-// function checkThree() {
-//     if (checkHour > 15) {
-//         $("#three").css('background-color', 'grey')
-//     }
-//     else if (checkHour == 15) {
-//         $("#three").css('background-color', 'red')
-//     }
-//     else {
-//         $("#three").css('background-color', 'green')
-//     }
-// }
-// checkThree();
-
-// function checkFour() {
-//     if (checkHour > 16) {
-//         $("#four").css('background-color', 'grey')
-//     }
-//     else if (checkHour == 16) {
-//         $("#four").css('background-color', 'red')
-//     }
-//     else {
-//         $("#four").css('background-color', 'green')
-//     }
-// }
-// checkFour();
-
-// function checkFive() {
-//     if (checkHour > 17) {
-//         $("#five").css('background-color', 'grey')
-//     }
-//     else if (checkHour == 17) {
-//         $("#five").css('background-color', 'red')
-//     }
-//     else {
-//         $("#five").css('background-color', 'green')
-//     }
-// }
-// checkFive();
 
 
 

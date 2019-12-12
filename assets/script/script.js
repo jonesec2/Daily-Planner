@@ -175,24 +175,21 @@ $('#five').val(localStorage.getItem("Task buttonNine"));
 //     });
 // });
 
-$('.form-control').each(function () {
-    $(this).data('number')
-    console.log($(this).data('number'))
-})
+var getStatusColor = function(hour, checkHour){
+  if (hour < checkHour) {
+    return 'grey'
+  } 
+  else if (hour == checkHour) {
+    return 'red'
+  }
+  else {
+    return 'green'
+  }
+}
 
-$('.form-control').each(function () {
-    if ($(this).data('number') < checkHour) {
-        $(".form-control").css('background-color', 'grey')
-    }
-    else if (checkHour == $(this).data('number')) {
-        $(".form-control").css('background-color', 'red')
-    }
-    else {
-        $(".form-control").css('background-color', 'green')
-    }
-    console.log($(this).data('number'))
-
-});
+for (var i = 0; i < wordArray.length; i++) {
+    $("#" + wordArray[i]).css('background-color', getStatusColor($(this).data('number'), 12))
+};
 
 var hourDivs = $('.form-control')
 

@@ -82,8 +82,8 @@ for (var i = 0; i < timeArray.length; i++) {
 //sort of dynamic local storage
 // $(".button").on("click", function () {
 //     var formData = $('.form-control').each(function (index) {
-//         $(this).val()
-//         console.log($(this).val())
+//         $(this.id).val()
+//         console.log($(this.id).val())
 //     })
 //     localStorage.setItem("Task " + this.id, formData);
 //     console.log(this.id)
@@ -95,55 +95,55 @@ for (var i = 0; i < timeArray.length; i++) {
 ///////////////////////////////////////////////////////////////
 // var storageArray = []
 
-var buttonNine = $(".button").on("click", function () {
+var buttonNine = $("#buttonOne").on("click", function () {
 
     var formText = document.getElementById('nine').value;
     localStorage.setItem("Task buttonOne", formText)
-    console.log(formText)
+
 })
-var buttonTen = $(".button").on("click", function () {
+var buttonTen = $("#buttonTwo").on("click", function () {
 
     var formText = document.getElementById('ten').value;
     localStorage.setItem("Task buttonTwo", formText)
     // console.log(formText)
 })
-var buttonEleven = $(".button").on("click", function () {
+var buttonEleven = $("#buttonThree").on("click", function () {
 
     var formText = document.getElementById('eleven').value;
     localStorage.setItem("Task buttonThree", formText)
     // console.log(formText)
 })
-var buttonTwelve = $(".button").on("click", function () {
+var buttonTwelve = $("#buttonFour").on("click", function () {
 
     var formText = document.getElementById('twelve').value;
     localStorage.setItem("Task buttonFour", formText)
     // console.log(formText)
 })
-var buttonOne = $(".button").on("click", function () {
+var buttonOne = $("#buttonFive").on("click", function () {
 
     var formText = document.getElementById('one').value;
     localStorage.setItem("Task buttonFive", formText)
     // console.log(formText)
 })
-var buttonTwo = $(".button").on("click", function () {
+var buttonTwo = $("#buttonSix").on("click", function () {
 
     var formText = document.getElementById('two').value;
     localStorage.setItem("Task buttonSix", formText)
     // console.log(formText)
 })
-var buttonThree = $(".button").on("click", function () {
+var buttonThree = $("#buttonSeven").on("click", function () {
 
     var formText = document.getElementById('three').value;
     localStorage.setItem("Task buttonSeven", formText)
     // console.log(formText)
 })
-var buttonFour = $(".button").on("click", function () {
+var buttonFour = $("#buttonEight").on("click", function () {
 
     var formText = document.getElementById('four').value;
     localStorage.setItem("Task buttonEight", formText)
     // console.log(formText)
 })
-var buttonFive = $(".button").on("click", function () {
+var buttonFive = $("#buttonNine").on("click", function () {
 
     var formText = document.getElementById('five').value;
     localStorage.setItem("Task buttonNine", formText)
@@ -178,37 +178,41 @@ $('#five').val(localStorage.getItem("Task buttonNine"));
 $('.form-control').each(function () {
     $(this).data('number')
     console.log($(this).data('number'))
+    console.log($(this.id))
 })
 
-$('.form-control').each(function () {
+
+
+$('input').each(function () {
+    console.log($(this.id))
     if ($(this).data('number') < checkHour) {
-        $(".form-control").css('background-color', 'grey')
+        $(this.id).css('background-color', 'grey')
     }
     else if (checkHour == $(this).data('number')) {
-        $(".form-control").css('background-color', 'red')
+        $(this.id).css('background-color', 'red')
     }
     else {
-        $(".form-control").css('background-color', 'green')
+        $(this.id).css('background-color', 'green')
     }
     console.log($(this).data('number'))
-
+  
 });
 
-var hourDivs = $('.form-control')
+// var hourDivs = $('.form-control')
 
-for (var i = 0; i < numberArray.length; i++) {
+// for (var i = 0; i < numberArray.length; i++) {
     
-    if ($(this[i]).data('number') == checkHour) {
-        hourDivs[i].parent().attr("style", "background-color:lightblue;");
-        hourDivs[i].parent().prevAll().attr("style", "background-color:lightgrey;");
-        hourDivs[i].parent().prevAll().addClass("disabled");
-        hourDivs[i].parent().nextAll().attr("style", "background-color:white;");
+//     if ($(this[i]).data('number') == checkHour) {
+//         hourDivs[i].parent().attr("style", "background-color:lightblue;");
+//         hourDivs[i].parent().prevAll().attr("style", "background-color:lightgrey;");
+//         hourDivs[i].parent().prevAll().addClass("disabled");
+//         hourDivs[i].parent().nextAll().attr("style", "background-color:white;");
 
-    }
-}
+//     }
+// }
 
 
-console.log(hourDivs.val())
+// console.log(hourDivs.val())
 // for (var t = 0; t < numberArray.length; t++) {
 
 

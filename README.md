@@ -15,6 +15,7 @@ The user will be able to update the input fields and save them in local storage 
 * [Website_Design](#Website_Design)
 * [Time_Display](#Time_Display)
 * [Hour_Divs](#Hour_Divs)
+* [Website](#Website)
 * [Credits](#Credits)
 
 ## Website_Design
@@ -30,6 +31,10 @@ The hour divs are a culmination of the regular 9-5 working hours, an input field
 
 Once a user has typed into the fields, they can save their input with the "Save" button for each hour. These are saved in local storage for each button. When the user saves an input and reloads the page, or leaves and comes back, the information they saved will display in the input field.
 
+##Website
+Here is a link to the git pages of the project.
+
+https://jonesec2.github.io/Daily-Planner/
 
 ## Credits
 As I continue this journey and collaborate with more colleagues, I will add their names and contact info to this list.

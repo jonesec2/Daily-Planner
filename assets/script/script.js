@@ -175,26 +175,28 @@ $('#five').val(localStorage.getItem("Task buttonNine"));
 //     });
 // });
 
-$('.form-control').each(function () {
-    $(this).data('number')
-    console.log($(this).data('number'))
-    console.log($(this.id))
-})
+// $('.form-control').each(function () {
+//     $(this).data('number')
+//     console.log($(this).data('number'))
+//     console.log($(this.id))
+// })
 
 
 
-$('input').each(function () {
-    console.log($(this.id))
+$('.form-control').each(function () { 
+    var thisId = this.id
+    console.log(thisId)
     if ($(this).data('number') < checkHour) {
-        $(this.id).css('background-color', 'grey')
+        $(thisId).css('background-color', 'grey')
     }
     else if (checkHour == $(this).data('number')) {
-        $(this.id).css('background-color', 'red')
+        $(thisId).css('background-color', 'red')
     }
     else {
-        $(this.id).css('background-color', 'green')
+        $(thisId).css('background-color', 'green')
     }
     console.log($(this).data('number'))
+    console.log(checkHour)
   
 });
 

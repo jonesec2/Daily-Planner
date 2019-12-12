@@ -1,4 +1,16 @@
 // sets the date at the top
+// var NowMoment = moment().format('LTS');
+// // setInterval(NowMoment, 1000);
+// console.log(NowMoment)
+// $(document).ready(function () {
+//     timerId = setInterval(function () {
+//         var eDisplayMoment = document.getElementById('timer');
+//         eDisplayMoment.innerHTML = NowMoment;
+//         setInterval(NowMoment, 1000);
+//     })
+// });
+
+
 var dateTime = null,
     date = null;
 
@@ -22,26 +34,18 @@ var hours = null
 timeNow = new Date();
 hours = timeNow.getHours();
 
+//dynamically checks the hour
 var checkHour = hours
+//manually set hour for testing
 // var checkHour = 14
-console.log(checkHour);
 
 // checks the current hour as a string every three seconds
 function showTime() {
     timerId = setInterval(function () {
         var timeNow = new Date();
         hours = timeNow.getHours();
-        // if (hours > 12) {
-        //     hours -= 12;
-        // }
-        // else if (hours === 0) {
-        //     hours = 12;
-        // } else {
-        //     hours = hours
-        // }
         var checkHour = hours
-        console.log(checkHour);
-    }, 3000)
+    })
 }
 showTime();
 
@@ -54,14 +58,16 @@ var wordArray = ["nine", "ten", "eleven", "twelve", "one", "two", "three", "four
 var numberArray = [9, 10, 11, 12, 13, 14, 15, 16, 17]
 var timeDivTime = null
 
+//for loop dynamically creating hour divs based on array
 for (var i = 0; i < timeArray.length; i++) {
     var timeDiv = $("<div>").addClass("row")
 
+    //creates entire div section to house the hour divs
     timeDiv.html(`
                     <div class= 'input-group mb-1 hour'>
                         <div class='input-group-prepend'><span id= ${timeDivArray[i]} class='pr-4 input-group-text'>${timeArray[i]}</span></div>
                         <input id=${wordArray[i]} type='text' data-number=${numberArray[i]} class='form-control' aria-label='hour'>    
-                        <div class='input-group-append' data-time=${wordArray[i]}> <button class='button' id= ${timeButtonArray[i]} >Save Plans <i class='fa fa-save'></i></button></div>
+                        <div class='input-group-append' data-time=${wordArray[i]}> <button class='button' id= ${timeButtonArray[i]} >Save   <i class='fa fa-save'></i></button></div>
                     </div>
                     `)
     $(".container").append(timeDiv)
@@ -69,15 +75,6 @@ for (var i = 0; i < timeArray.length; i++) {
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
-// create local storage .on("click"
-// each hour needs it's own local storage
-// var formId = null
-// $('.form-control').each(function () {
-//     formId = this.value;
-//     console.log(formId)
-
-// })
-
 
 //sort of dynamic local storage
 // $(".button").on("click", function () {
@@ -93,7 +90,6 @@ for (var i = 0; i < timeArray.length; i++) {
 
 //hard coded section
 ///////////////////////////////////////////////////////////////
-// var storageArray = []
 
 var buttonNine = $("#buttonOne").on("click", function () {
 
@@ -149,6 +145,7 @@ var buttonFive = $("#buttonNine").on("click", function () {
     localStorage.setItem("Task buttonNine", formText)
     // console.log(formText)
 })
+
 //set local storage equal to form value
 $('#nine').val(localStorage.getItem("Task buttonOne"));
 $('#ten').val(localStorage.getItem("Task buttonTwo"));
@@ -159,49 +156,25 @@ $('#two').val(localStorage.getItem("Task buttonSix"));
 $('#three').val(localStorage.getItem("Task buttonSeven"));
 $('#four').val(localStorage.getItem("Task buttonEight"));
 $('#five').val(localStorage.getItem("Task buttonNine"));
-///////////////////////////////////////////////////////////////
-
-// $(document.body).on("load", function () {
-//     $(".form-control").each(function (i) {
-//         if (checkHour > $('input').data('number')) {
-//             $("input").css('background-color', 'grey')
-//         }
-//         else if (checkHour === $('input').data('number')) {
-//             $("input").css('background-color', 'red')
-//         }
-//         else {
-//             $("input").css('background-color', 'green')
-//         }
-//     });
-// });
-
-
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-// finds hour by div
-
-$('.form-control').each(function () { 
+// finds hour by input id
+// Updates each input individually based on .each()
+$('.form-control').each(function () {
     var thisId = this.id
     console.log(thisId)
-    
+
     if ($(this).data('number') < checkHour) {
-        document.getElementById(thisId).style.background ="rgb(169, 169, 169)";
+        document.getElementById(thisId).style.background = "rgb(169, 169, 169)";
     }
     else if (checkHour == $(this).data('number')) {
-        document.getElementById(thisId).style.background ="rgb(40, 130, 171)";
+        document.getElementById(thisId).style.background = "rgb(40, 130, 171)";
     }
     else {
-        document.getElementById(thisId).style.background ="rgb(64, 192, 74)";
+        document.getElementById(thisId).style.background = "rgb(64, 192, 74)";
     }
     console.log($(this).data('number'))
     console.log(checkHour)
-  
+
 });
-
-// current function styles all divs at once.
-// need to figure out how to parse each div as an individual, and update individually depending on current time
-
-//use for .each to style these things
-
-
-
+////////////////////////////////////////////////////////////////////////////////////////////////////////
